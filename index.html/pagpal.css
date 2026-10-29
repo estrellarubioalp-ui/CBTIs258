@@ -1,0 +1,610 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #263238;
+  background: #f4f6f9;
+  line-height: 1.6;
+}
+ .encabezado-fijo {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: linear-gradient(100deg, #123e70, #123e70, #123e70);
+  box-shadow: 0 3px 12px #00000025;
+  border-bottom: 5px solid #53a89c;
+}
+header {
+  background: transparent;
+  padding: 10px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  background: #123e70;
+  color: white;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.logo h2 {
+  color: #123e70;
+  font-size: 21px;
+}
+
+.logo p {
+  font-size: 12px;
+  color: #666;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.logo-icon {
+  background: transparent;
+  border: 2px solid white;
+}
+
+nav {
+  background: transparent;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  padding: 15px 22px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav a:hover {
+  background: #e4a62a;
+  color: #123e70;
+}
+
+.hero {
+  min-height: 520px;
+  padding: 65px 8%;
+  display: flex;
+  align-items: center;
+  color: white;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #123e70;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background-image: url("https://cbtis258.edu.mx/wp-content/uploads/2024/08/cbtis258_1.webp");
+  background-position: center;
+  background-size: cover;
+  animation: cambiarFondo 24s infinite, moverFondo 18s ease-in-out infinite alternate;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, rgba(5,20,29,.82), rgba(8,35,43,.30));
+}
+@keyframes cambiarFondo {
+  0%, 20% { background-image: url("https://cbtis258.edu.mx/wp-content/uploads/2024/08/cbtis258_1.webp"); }
+  25%, 45% { background-image: url("https://cbtis258.edu.mx/wp-content/uploads/2024/08/cbtis258_2.webp"); }
+  50%, 70% { background-image: url("https://cbtis258.edu.mx/wp-content/uploads/2024/08/cbtis258_3.webp"); }
+  75%, 95% { background-image: url("https://cbtis258.edu.mx/wp-content/uploads/2024/08/cbtis258_4.webp"); }
+  100% { background-image: url("https://cbtis258.edu.mx/wp-content/uploads/2024/08/cbtis258_1.webp"); }
+}
+@keyframes moverFondo {
+  from { background-position: center center; transform: scale(1); }
+  to { background-position: 60% center; transform: scale(1.08); }
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero small {
+  color: #ffd16a;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-size: clamp(35px, 5vw, 56px);
+  line-height: 1.15;
+  margin: 18px 0;
+}
+
+.hero p {
+  margin-bottom: 25px;
+  font-size: 17px;
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  background: #e4a62a;
+  color: #123e70;
+  padding: 13px 23px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #ffd16a;
+}
+
+/* SECCIONES */
+section {
+  padding: 60px 8%;
+}
+
+.titulo {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.titulo h2 {
+  color: #123e70;
+  font-size: 31px;
+}
+
+.titulo p {
+  color: #666;
+  margin-top: 8px;
+}
+
+.info {
+  text-align: center;
+  max-width: 850px;
+  margin: auto;
+}
+
+/* GALERIA */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.galeria img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px #00000015;
+}
+
+
+.plataformas {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: center;
+  gap: 34px;
+}
+.plataformas > div {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #263238;
+  text-align: center;
+  text-decoration: none;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 8px;
+  box-shadow: none;
+  transition: transform .25s;
+}
+.plataformas > div { transition: transform .25s; }
+.plataformas > div:hover { transform: translateY(-5px); }
+.plataformas img {
+  width: 100%;
+  max-width: 250px;
+  height: 105px;
+  object-fit: contain;
+  border-radius: 0;
+  box-shadow: none;
+}
+.plataformas h3 {
+  margin-top: 8px;
+  color: #263238;
+  font-size: 16px;
+}
+.oferta-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 28px 22px;
+  align-items: start;
+}
+.oferta-card {
+  display: block;
+  grid-column: span 2;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  text-align: center;
+  text-decoration: none;
+  color: #263238;
+  box-shadow: none;
+  transition: transform 0.2s;
+}
+.oferta-card:hover { transform: translateY(-4px); }
+.oferta-card img {
+  display: block;
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: none;
+}
+.oferta-card h3 {
+  margin-top: 12px;
+  color: #263238;
+  font-size: 20px;
+}
+/* Las dos últimas carreras quedan centradas como en la referencia. */
+.oferta-card:nth-child(7) { grid-column: 2 / span 2; }
+.oferta-card:nth-child(8) { grid-column: 4 / span 2; }
+\n/* VIDEO */
+.video-section {
+  background: #e8eef5;
+}
+
+.video-container {
+  max-width: 900px;
+  margin: auto;
+  aspect-ratio: 16 / 9;
+  background: #0b2039;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.video-container iframe,
+.video-container video {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+
+.form-section {
+  background: white;
+}
+
+.formulario {
+  max-width: 800px;
+  margin: auto;
+  padding: 30px;
+  background: #f7f9fc;
+  border: 1px solid #e0e5ed;
+  border-radius: 12px;
+}
+
+.formulario h3 {
+  color: #123e70;
+  margin-bottom: 20px;
+}
+
+.campos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.campo.completo {
+  grid-column: 1 / -1;
+}
+
+label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd3df;
+  border-radius: 5px;
+  font: inherit;
+  background: white;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: 2px solid #8bb9ef;
+  border-color: #123e70;
+}
+
+.aviso {
+  margin: 20px 0;
+  font-size: 13px;
+  color: #555;
+}
+
+.formulario button {
+  width: 100%;
+}
+
+/* REQUISITOS */
+.requisitos {
+  max-width: 750px;
+  margin: auto;
+}
+
+.requisitos li {
+  margin: 12px 0;
+}
+
+
+footer {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(120deg, #252a2c 0%, #164f4c 45%, #087f83 100%);
+  color: white;
+  padding: 38px 7% 48px;
+  text-align: left;
+  border-bottom: 12px solid #4a9b91;
+}
+.pie-contenido {
+  max-width: 1250px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 1fr 1.1fr;
+  gap: 30px;
+}
+.pie-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.pie-logo-imagen {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+.pie-columna h3 {
+  color: #f08b9e;
+  font-size: 15px;
+  margin: 10px 0 18px;
+  text-transform: uppercase;
+}
+.pie-columna p, .pie-columna a {
+  display: block;
+  color: #f0f6f4;
+  font-size: 14px;
+  margin: 0 0 12px;
+  text-decoration: none;
+  line-height: 1.5;
+}
+.pie-columna a:hover { text-decoration: underline; color: #fff; }
+.pie-contacto { margin-bottom: 16px; }
+.pie-contacto span { margin-right: 7px; color: #f3d4a5; }
+.pie-copy {
+  max-width: 1250px;
+  margin: 24px auto 0;
+  padding-top: 14px;
+  border-top: 1px solid #ffffff55;
+  color: #d5e8e3;
+  font-size: 12px;
+}
+
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav a {
+    padding: 12px;
+  }
+
+  .hero {
+    padding: 50px 7%;
+  }
+
+  .galeria {
+    grid-template-columns: 1fr;
+  }
+
+  .plataformas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pie-contenido {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .oferta-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .oferta-card,
+  .oferta-card:nth-child(7),
+  .oferta-card:nth-child(8) {
+    grid-column: auto;
+  }
+
+  .galeria img {
+    height: 230px;
+  }
+
+  .campos {
+    grid-template-columns: 1fr;
+  }
+
+  .campo.completo {
+    grid-column: auto;
+  }
+
+  .formulario {
+    padding: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .pie-contenido { grid-template-columns: 1fr; }
+  header { flex-direction: row; text-align: left; padding: 8px 4%; }
+  .logo p { display: none; }
+  nav a { padding: 10px 9px; font-size: 12px; }
+  .oferta-grid { grid-template-columns: 1fr; }
+  .plataformas { grid-template-columns: 1fr 1fr; gap: 18px; }
+  .plataformas img { height: 80px; }
+}
+
+.marca-cbtis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-right: 14px;
+}
+.marca-cbtis img {
+  width: 68px;
+  height: 68px;
+  object-fit: contain;
+  display: block;
+}
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+header .logo img { max-height: 54px; object-fit: contain; }
+@media (max-width: 650px) {
+  .marca-cbtis img { width: 45px; height: 45px; }
+  header { gap: 8px; }
+}
+
+
+:root {
+  --azul-cbtis: #123e70;
+}
+.encabezado-fijo {
+  background: var(--azul-cbtis);
+  border-bottom-color: #2c659c;
+}
+.marca-cbtis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.marca-cbtis img {
+  display: block;
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+  object-position: center;
+}
+header {
+  background: var(--azul-cbtis);
+}
+.logo h2, .logo p {
+  color: #ffffff;
+}
+.logo-icon {
+  display: none;
+}
+footer {
+  background: linear-gradient(135deg, #123e70, #0b2d52);
+}
+.pie-logo-imagen {
+  width: 105px;
+  height: 105px;
+  object-fit: contain;
+}
+nav a:hover {
+  background: #2c659c;
+  color: #ffffff;
+}
+@media (max-width: 700px) {
+  .marca-cbtis img {
+    width: 54px;
+    height: 54px;
+  }
+}
+
+header {
+  justify-content: flex-start;
+  text-align: left;
+}
+header .logo {
+  margin-left: 0;
+  text-align: left;
+}
+.logo h2 {
+  color: #ffffff;
+}
+.logo p {
+  color: #eaf2fb;
+}
+.marca-cbtis img {
+  background: transparent;
+  mix-blend-mode: screen;
+}
+.oferta-card img {
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+header ul li a {
+  padding: 10px 20px;
+  display: block;
+  color: floralwhite;
+  text-decoration: none;
+}
+.p{
+  text-align: center;
+}
+.boton {
+    display: inline-block;
+    background-color: #123e70;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    text-align: center;
+  
+}

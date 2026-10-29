@@ -1,0 +1,187 @@
+.imagen{
+   
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s;
+     position: relative;
+    left: 5px;
+    top: 10px;
+}
+.hoja{
+    position: relative;
+    width: 85%;
+    height: 88%;
+    max-width: 1250px;
+    min-height: 2450px;
+    margin: auto;
+    padding: 30px;
+    background-color: rgb(223, 220, 220);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(101, 37, 37, 0.816);
+}
+.prog{
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s;
+     position: relative;
+     left: -35px;
+    top: -9px;
+}
+.mec{
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s;
+     position: relative;
+     left: -29px;
+    top: 5px;
+}
+.mec2{
+    position: relative;
+    left: 15px;
+    top:auto ;
+}
+.hos{
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s;
+     position: relative;
+    left: 175px;
+    top: -39px;
+}
+.ia{
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s;
+     position: relative;
+    left: 195px;
+    top: -20px;
+}
+.ia2{
+    position: relative;
+    left: 215px;
+    top:-40px ;
+}
+.hos2{
+     position: relative;
+    left: 190px;
+    top: -50px;
+}
+
+.cibs{
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s;
+    position: relative;
+    left: -25px;
+}
+.log{
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s;
+     position: relative;
+     left: -10px;
+    
+}
+.log2{
+    position: relative;
+    left: 30px;
+}
+.titl3{
+    margin-left: 45px;
+}
+
+h1 {
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 35px;
+}
+
+.modulo {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.tarjeta {
+    background-color: #641c32;
+    color: white;
+    width: 230px;
+    min-height: 150px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.tarjeta p {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.tarjeta h2 {
+    font-size: 25px;
+    margin: 12px 0;
+}
+
+.tarjeta span {
+    display: inline-block;
+    background-color: #f0e6e9;
+    color: #333;
+    padding: 7px 12px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.contenido {
+    flex: 1;
+}
+
+.contenido h3 {
+    font-size: 20px;
+    margin-top: 0;
+}
+
+.contenido ul {
+    padding-left: 20px;
+}
+
+.contenido li {
+    color: #777;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+.boton {
+    display: inline-block;
+    background-color: #123e70;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    text-align: center;
+    position: relative;
+    top: -77px;
+  
+}
+.boton2{
+    display: inline-block;
+    background-color: #123e70;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    text-align: center;
+    margin-left: 80%;
+  
+}
+

@@ -1,0 +1,456 @@
+<title>Preinscripciones | CBTIS 258</title>
+<link rel="icon" type="image/png"
+       href="https://www.edumediamanager.com/uploads/CBTis%20258/img/logo_plantel.png">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #263238;
+  background: #f4f6f9;
+  line-height: 1.6;
+}
+
+/* ENCABEZADO */
+header {
+  background: white;
+  padding: 15px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  background: #123e70;
+  color: white;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.logo h2 {
+  color: #123e70;
+  font-size: 21px;
+}
+
+.logo p {
+  font-size: 12px;
+  color: #666;
+}
+
+header a {
+  color: #123e70;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* NAVEGACION */
+nav {
+  background: #123e70;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  padding: 15px 22px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav a:hover {
+  background: #F5F5DC;
+  color: #17263a;
+}
+
+/* PORTADA */
+.hero {
+  min-height: 440px;
+  padding: 65px 8%;
+  display: flex;
+  align-items: center;
+  color: white;
+  background:
+linear-gradient(90deg, #722F37, #722F37),
+    url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1600&q=85")
+    center/cover;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero small {
+  color: #ffd16a;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-size: clamp(35px, 5vw, 56px);
+  line-height: 1.15;
+  margin: 18px 0;
+}
+
+.hero p {
+  margin-bottom: 25px;
+  font-size: 17px;
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  background: #F5F5DC;
+  color: #722F37;
+  padding: 13px 23px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #F5F5DC;
+}
+
+/* SECCIONES */
+section {
+  padding: 60px 8%;
+}
+
+.titulo {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.titulo h2 {
+  color: #722F37;
+  font-size: 31px;
+}
+
+.titulo p {
+  color: #666;
+  margin-top: 8px;
+}
+
+/* INFORMACION */
+.info {
+  text-align: center;
+  max-width: 850px;
+  margin: auto;
+}
+
+/* GALERIA */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.galeria img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px #00000015;
+}
+
+/* VIDEO */
+.video-section {
+  background: #e8eef5;
+}
+
+.video-container {
+  max-width: 900px;
+  margin: auto;
+  aspect-ratio: 16 / 9;
+  background: #0b2039;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.video-container iframe,
+.video-container video {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* FORMULARIO */
+.form-section {
+  background: white;
+}
+
+.formulario {
+  max-width: 800px;
+  margin: auto;
+  padding: 30px;
+  background: #f7f9fc;
+  border: 1px solid #e0e5ed;
+  border-radius: 12px;
+}
+
+.formulario h3 {
+  color: #123e70;
+  margin-bottom: 20px;
+}
+
+.campos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.campo.completo {
+  grid-column: 1 / -1;
+}
+
+label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd3df;
+  border-radius: 5px;
+  font: inherit;
+  background: white;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: 2px solid #8bb9ef;
+  border-color: #123e70;
+}
+
+.aviso {
+  margin: 20px 0;
+  font-size: 13px;
+  color: #555;
+}
+
+.formulario button {
+  width: 100%;
+}
+
+/* REQUISITOS */
+.requisitos {
+  max-width: 750px;
+  margin: auto;
+}
+
+.requisitos li {
+  margin: 12px 0;
+}
+
+/* PIE */
+footer {
+  background: #0b2039;
+  color: white;
+  padding: 30px 7%;
+  text-align: center;
+}
+
+footer p {
+  font-size: 13px;
+  color: #d5dfec;
+  margin: 5px;
+}
+
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav a {
+    padding: 12px;
+  }
+
+  .hero {
+    padding: 50px 7%;
+  }
+
+  .galeria {
+    grid-template-columns: 1fr;
+  }
+
+  .galeria img {
+    height: 230px;
+  }
+
+  .campos {
+    grid-template-columns: 1fr;
+  }
+
+  .campo.completo {
+    grid-column: auto;
+  }
+
+  .formulario {
+    padding: 20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    <div class="logo-icon">ESC</div>
+    <div>
+      <h2>CBTIS 258</h2>
+      <p>Bachillerato Tecnológico</p>
+    </div>
+  </div>
+  <a href="CBTIS.html">Regresar</a>
+</header>
+
+<div class="hoja">
+    <section id="requisitos">
+    <div class="titulo">
+      <h2>Requisitos de preinscripción</h2>
+      <p>Prepara tus documentos antes de realizar el trámite.</p>
+    </div>
+
+    <div class="requisitos">
+      <ul>
+        <li>CURP del aspirante.</li>
+        <li>Acta de nacimiento.</li>
+        <li>Comprobante de domicilio.</li>
+        <li>Constancia de estudios o certificado de secundaria,
+            según corresponda a la convocatoria.</li>
+        <li>Correo electrónico y teléfono de contacto.</li>
+      </ul>
+      <p style="margin-top:18px">
+        <strong>Importante:</strong> Confirma los requisitos
+        oficiales y las fechas vigentes con la institución.
+      </p>
+    </div>
+  </section>
+  <section class="form-section" id="preinscripcion">
+    <div class="titulo">
+      <h2>Formulario de preinscripción</h2>
+      <p>Completa tus datos para iniciar tu solicitud.</p>
+    </div>
+
+    <form class="formulario"
+      onsubmit="return enviarFormulario(event)">
+
+      <h3>Datos del aspirante</h3>
+
+      <div class="campos">
+        <div class="campo">
+          <label for="nombre">Nombre(s) *</label>
+          <input id="nombre" name="nombre"
+            autocomplete="given-name" required>
+        </div>
+
+        <div class="campo">
+          <label for="apellidos">Apellidos *</label>
+          <input id="apellidos" name="apellidos"
+            autocomplete="family-name" required>
+        </div>
+
+        <div class="campo">
+          <label for="curp">CURP</label>
+          <input id="curp" name="curp"
+            maxlength="18" placeholder="CURP del aspirante">
+        </div>
+
+        <div class="campo">
+          <label for="fecha">Fecha de nacimiento *</label>
+          <input type="date" id="fecha"
+            name="fecha_nacimiento" required>
+        </div>
+
+        <div class="campo">
+          <label for="correo">Correo electrónico *</label>
+          <input type="email" id="correo" name="correo"
+            autocomplete="email" required>
+        </div>
+
+        <div class="campo">
+          <label for="telefono">Teléfono de contacto *</label>
+          <input type="tel" id="telefono" name="telefono"
+            autocomplete="tel" required>
+        </div>
+
+        <div class="campo completo">
+          <label for="escuela">Secundaria de procedencia *</label>
+          <input id="escuela" name="escuela_procedencia" required>
+        </div>
+
+        <div class="campo completo">
+          <label for="carrera">Carrera de interés *</label>
+          <select id="carrera" name="carrera" required>
+            <option value="">Selecciona una opción</option>
+            <option value="programacion">Programación</option>
+            <option value="electronica">Electrónica</option>
+            <option value="administracion">Administración</option>
+            <option value="otra">Otra especialidad</option>
+          </select>
+        </div>
+
+        <div class="campo completo">
+          <label for="comentarios">Comentarios (opcional)</label>
+          <textarea id="comentarios" name="comentarios"
+            rows="3"
+            placeholder="Escribe aquí tus dudas"></textarea>
+        </div>
+      </div>
+
+      <p class="aviso">
+        Los datos deben tratarse de forma segura y conforme
+        al aviso de privacidad de la institución. No incluyas
+        documentos personales en este formulario de demostración.
+      </p>
+
+      <button class="btn" type="submit">
+        Enviar solicitud
+      </button>
+
+      <p id="mensaje" role="status"
+        aria-live="polite" style="margin-top:15px"></p>
+
+        <button class="btn" type="submit">
+        <a href="https://www.edumediamanager.com/aspirante/preregistro/formulario/CBTis%20258">
+            Has click para el pre-registro
+        </a>
+      </button>
+    </form>
+  </section>
+
+</main>
+
+      
